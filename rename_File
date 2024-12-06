@@ -1,7 +1,7 @@
 import os
 
 def rename_files_in_folder(folder_path):
-    # Step 1: Check if the path exists and is a folder
+    # Check if the path exists and is a folder
     if not os.path.exists(folder_path):
         print(f"Error: The path '{folder_path}' does not exist.")
         return
@@ -9,18 +9,18 @@ def rename_files_in_folder(folder_path):
         print(f"Error: The path '{folder_path}' is not a folder. Please provide a valid folder path.")
         return
 
-    # Step 2: List all files in the folder (ignore subdirectories)
+    #  List all files in the folder (ignore subdirectories)
     files = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
 
-    # Step 3: Handle the case where the folder is empty
+    #  Handle the case where the folder is empty
     if not files:
         print("The folder is empty. No files to rename.")
         return
 
-    # Step 4: Sort the files alphabetically
+    #  Sort the files sequentially
     files.sort()
 
-    # Step 5: Rename the files sequentially
+    #  Rename the files sequentially
     print("Renaming files...")
     for index, file_name in enumerate(files, start=1):
         # Get the full original path
