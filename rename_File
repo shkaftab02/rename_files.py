@@ -26,6 +26,5 @@ def rename_files_in_folder(folder_path):
             print(f"Error: Could not rename file '{file_name}'. Reason: {e}")
     print("Renaming completed.")
 if __name__ == "__main__":
-    # Step 6: Take the folder path as input from the user
     folder_path = input("Please enter the path to the folder: ").strip()
     rename_files_in_folder(folder_path)
